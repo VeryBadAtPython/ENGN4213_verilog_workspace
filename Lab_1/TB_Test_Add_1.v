@@ -15,9 +15,9 @@ module TB_Test_Add_1();
    my_adder UUT (
 		.X(X), 
 		.Y(Y), 
-		.C_in(Cin), 
+		.Cin(Cin), 
 		.Z(Z), 
-		.C_out(Cout)
+		.Cout(Cout)
    );
 	
 // Duration of simulation
