@@ -6,7 +6,7 @@ Workspace for various ENGN4213 Projects
 ![alt text](image-1.png)
 ### Part 7
 
-![alt text](image.png)
+![alt text](image-10.png)
 
 ## Activity 2 
 
@@ -43,3 +43,22 @@ Z_{out} = XY + YC_{in} + X C_{in}
 
 
 ![alt text](image-2.png)
+
+
+## Activity 3
+
+
+![alt text](image-4.png)
+
+
+![alt text](image-9.png)
+
+### Part 6
+15ns
+
+### Part 8
+$$
+Z = YS' + XY + XS
+$$
+
+![alt text](image-11.png)

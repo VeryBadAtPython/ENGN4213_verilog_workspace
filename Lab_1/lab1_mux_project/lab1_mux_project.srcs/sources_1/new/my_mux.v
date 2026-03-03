@@ -27,7 +27,7 @@ module my_mux(
     input wire S
     );
     
-    assign Z = (X & S) | (Y & (-S));
+    assign Z = (X & S) | (Y & (~S));
 endmodule
 
 
