@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Mar 10 09:34:49 2026
+# Process ID         : 24600
+# Current directory  : C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_2/full_adder/full_adder.runs/synth_1
+# Command line       : vivado.exe -log full_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source full_adder.tcl
+# Log file           : C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_2/full_adder/full_adder.runs/synth_1/full_adder.vds
+# Journal file       : C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_2/full_adder/full_adder.runs/synth_1\vivado.jou
+# Running On         : JKB_LENOVO
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 155H
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 16573 MB
+# Swap memory        : 18250 MB
+# Total Virtual      : 34823 MB
+# Available Virtual  : 12597 MB
+#-----------------------------------------------------------
+source full_adder.tcl -notrace
