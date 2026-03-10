@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../arbitrary_clock_divider.srcs/sources_1/new/clockDividerHB.v" \
+"../../../../arbitrary_clock_divider.srcs/sim_1/imports/Lab 2 resources/TEST_clockDividerHB2-125MHz.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

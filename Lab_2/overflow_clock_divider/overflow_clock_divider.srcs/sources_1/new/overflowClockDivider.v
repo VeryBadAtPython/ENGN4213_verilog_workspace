@@ -26,10 +26,10 @@ module overflowClockDivider (
     input wire enable,
     output wire dividedClk
 );
-    reg [16:0] counter;
+    reg [26:0] counter;
     always @(posedge clk) begin
-        if (reset == 1'b1) counter <= 17'd0;
+        if (reset == 1'b1) counter <= 27'd0;
         else if (enable == 1'b1) counter <= counter + 1'b1;
     end
-    assign dividedClk = counter[16];
+    assign dividedClk = counter[26];
 endmodule
