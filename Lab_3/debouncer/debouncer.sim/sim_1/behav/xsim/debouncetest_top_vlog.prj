@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../debouncer.srcs/sources_1/imports/new/clockDividerHB.v" \
+"../../../../debouncer.srcs/sources_1/imports/Activity 3/counter.v" \
+"../../../../debouncer.srcs/sources_1/imports/Activity 3/debouncer.v" \
+"../../../../debouncer.srcs/sources_1/imports/Activity 3/spot.v" \
+"../../../../debouncer.srcs/sources_1/imports/Activity 3/sync.v" \
+"../../../../debouncer.srcs/sources_1/imports/Activity 3/debouncetest_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
