@@ -1,0 +1,238 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Mar 17 11:17:36 2026
+# Process ID         : 18788
+# Current directory  : C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.runs/synth_1
+# Command line       : vivado.exe -log multipleSevenSegmentDisplays_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source multipleSevenSegmentDisplays_TOP.tcl
+# Log file           : C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.runs/synth_1/multipleSevenSegmentDisplays_TOP.vds
+# Journal file       : C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.runs/synth_1\vivado.jou
+# Running On         : JKB_LENOVO
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 155H
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 16573 MB
+# Swap memory        : 14495 MB
+# Total Virtual      : 31068 MB
+# Available Virtual  : 3179 MB
+#-----------------------------------------------------------
+source multipleSevenSegmentDisplays_TOP.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/utils_1/imports/synth_1/multipleSevenSegmentDisplays_TOP.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/utils_1/imports/synth_1/multipleSevenSegmentDisplays_TOP.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top multipleSevenSegmentDisplays_TOP -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29664
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1316.926 ; gain = 540.500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'multipleSevenSegmentDisplays_TOP' [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/sources_1/new/multipleSevenSegmentDisplays_TOP.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clockDividerHB' [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/sources_1/imports/new/clockDividerHB.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clockDividerHB' (0#1) [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/sources_1/imports/new/clockDividerHB.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/sources_1/new/multipleSevenSegmentDisplays_TOP.v:45]
+INFO: [Synth 8-6157] synthesizing module 'sevenSegmentDecoder' [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/sources_1/imports/Activity 1/sevenSegmentDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sevenSegmentDecoder' (0#1) [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/sources_1/imports/Activity 1/sevenSegmentDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multipleSevenSegmentDisplays_TOP' (0#1) [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/sources_1/new/multipleSevenSegmentDisplays_TOP.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1435.047 ; gain = 658.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1435.047 ; gain = 658.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1435.047 ; gain = 658.621
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1435.047 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/constrs_1/new/two_ssds_constraints.xdc]
+Finished Parsing XDC File [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/constrs_1/new/two_ssds_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.srcs/constrs_1/new/two_ssds_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/multipleSevenSegmentDisplays_TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/multipleSevenSegmentDisplays_TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1479.070 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1479.070 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1479.070 ; gain = 702.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1479.070 ; gain = 702.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1479.070 ; gain = 702.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1479.070 ; gain = 702.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1479.070 ; gain = 702.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1630.207 ; gain = 853.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1649.492 ; gain = 873.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1649.492 ; gain = 873.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1889.496 ; gain = 1113.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1889.496 ; gain = 1113.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1889.496 ; gain = 1113.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1889.496 ; gain = 1113.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1889.496 ; gain = 1113.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1889.496 ; gain = 1113.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     2|
+|4     |LUT2   |     1|
+|5     |LUT4   |     1|
+|6     |LUT5   |     2|
+|7     |LUT6   |     2|
+|8     |FDRE   |    20|
+|9     |IBUF   |     1|
+|10    |OBUF   |     8|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1889.496 ; gain = 1113.070
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1889.496 ; gain = 1069.047
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1889.496 ; gain = 1113.070
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1895.918 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1897.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8bacb04b
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1897.586 ; gain = 1352.512
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1897.586 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jacob/Documents/Vivado_Projects/ENGN4213_verilog_workspace/Lab_3/multiple_seven_segment_displays/multiple_seven_segment_displays.runs/synth_1/multipleSevenSegmentDisplays_TOP.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file multipleSevenSegmentDisplays_TOP_utilization_synth.rpt -pb multipleSevenSegmentDisplays_TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 11:18:12 2026...
