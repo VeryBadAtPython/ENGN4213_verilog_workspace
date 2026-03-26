@@ -41,7 +41,7 @@ always @ (*) begin
             else nextstate=IDLE;
         end
         CAPT: begin
-            if (sample_count==4'd8) begin
+            if (sample_count>=4'd8) begin
                 nextstate=DONE;
             end
             else nextstate=CAPT;

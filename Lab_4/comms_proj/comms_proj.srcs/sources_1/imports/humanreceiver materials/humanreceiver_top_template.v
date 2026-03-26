@@ -52,12 +52,19 @@ module humanreceiver_top(
     );
     
     // Debounce the signal
-    wire btn_signal_db;
+    wire btn_signal_db, btn_signal_db_int;
     debouncer deb_signal_inst (
         .switchIn(btn_signal),
         .clk(clk),
         .reset(reset),
-        .debounceout(btn_signal_db)
+        .debounceout(btn_signal_db_int)
+    );
+    holding_register #(.SIZE(1)) hold_signal (
+        .clk(clk),
+        .reset(beat_1Hz),
+        .enable(~btn_signal_db), 
+        .data_in(btn_signal_db_int),
+        .reg_data(btn_signal_db)
     );
 	
 	// Optional SPOT and synchronisers
@@ -73,7 +80,7 @@ module humanreceiver_top(
         .serial_in(btn_signal_db),
         .parallel_out(sipo_value)
     );
-    holding_register #(.SIZE(8)) hold_signal (
+    holding_register #(.SIZE(8)) hold_sipo (
         .clk(clk),
         .reset(reset),
         .enable(reg_enable), 
