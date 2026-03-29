@@ -17,7 +17,7 @@ module humanreceiver_top(
         .clk(clk),
         .reset(reset),
         .beat(beat_1Hz),
-        .capture(btn_capture_spot),
+        .capture(s_clock_spot), // Start capture on first clock clock cyc
         .blink_active(),
         .fsm_beat_enable(),
         .fsm_reg_enable(reg_enable)
@@ -49,19 +49,19 @@ module humanreceiver_top(
     );
     
     // Sync the data and hold for that dataclock cycle
-    wire s_data_syn, s_data_held;
+    wire s_data_syn;//, s_data_held;
     sync sync_s_data (
         .in(s_data),
         .clk(clk),
         .out(s_data_syn)
     );
-    holding_register #(.SIZE(1)) hold_signal (
-        .clk(clk),
-        .reset(s_clock_spot),
-        .enable(~s_data_held), 
-        .data_in(s_data_syn),
-        .reg_data(s_data_held)
-    );
+    //holding_register #(.SIZE(1)) hold_signal (
+    //    .clk(clk),
+    //    .reset(s_clock_spot),
+    //    .enable(~s_data_held), 
+    //    .data_in(s_data_syn),
+    //    .reg_data(s_data_held)
+    //);
     
     // Debounce and SPOT the capture button
     //wire btn_capture_db, btn_capture_spot;
@@ -103,13 +103,13 @@ module humanreceiver_top(
     SIPO sipo_inst (
         .clk(clk),
         .push(s_clock_spot),        // trigger on heartbeat
-        .serial_in(s_data_held),
+        .serial_in(s_data_syn),
         .parallel_out(sipo_value)
     );
     holding_register #(.SIZE(8)) hold_sipo (
         .clk(clk),
         .reset(reset),
-        .enable(reg_enable), \\ TODO
+        .enable(reg_enable),
         .data_in(sipo_value),
         .reg_data(held_value)
     );

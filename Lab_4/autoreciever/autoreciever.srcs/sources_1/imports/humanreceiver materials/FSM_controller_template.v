@@ -42,13 +42,13 @@ always @ (*) begin
         end
         CAPT: begin
             if (sample_count>=4'd8) begin
-                nextstate=DONE;
+                nextstate=IDLE;
             end
             else nextstate=CAPT;
         end
-        DONE: begin
-            nextstate=DONE; // Reset transition back to IDLE handles sequentially
-        end
+        //DONE: begin
+        //    nextstate=DONE; // Reset transition back to IDLE handles sequentially
+        //end
         default: nextstate=IDLE;
     endcase
 end
@@ -61,35 +61,36 @@ end
 //    if a Moore machine is being modelled, outputs will be coded as values
 //    if a Mealy machine is being modelled, outputs may also include input signals
 // ---
-reg done_prev;
+reg idle_prev;
 always @(posedge clk) begin
     if (reset) begin
-        done_prev <= 0;
+        idle_prev <= 0;
         fsm_reg_enable <= 0;
     end else begin
-        done_prev <= (state == DONE);
-        fsm_reg_enable <= (state == DONE) && !done_prev;
+        idle_prev <= (state == IDLE);
+        fsm_reg_enable <= (state == IDLE) && !idle_prev;
     end
 end
-always @ (*) begin
-    case(state)
-        IDLE: begin
-           blink_active=0;
-           fsm_beat_enable=0;
-        end
-        CAPT: begin
-            blink_active=1;
-            fsm_beat_enable=1;
-        end
-        DONE: begin
-            blink_active=0;
-            fsm_beat_enable=0;
-        end
-        default: begin
-            blink_active=0;
-            fsm_beat_enable=0;
-        end
-    endcase
-end
+
+//always @ (*) begin
+//    case(state)
+//        IDLE: begin
+//           blink_active=0;
+//           fsm_beat_enable=0;
+//        end
+//        CAPT: begin
+//            blink_active=1;
+//            fsm_beat_enable=1;
+//        end
+//        DONE: begin
+//            blink_active=0;
+//            fsm_beat_enable=0;
+//        end
+//        default: begin
+//            blink_active=0;
+//            fsm_beat_enable=0;
+//        end
+//    endcase
+//end
 
 endmodule
